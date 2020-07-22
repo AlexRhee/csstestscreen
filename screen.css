@@ -1,88 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+/* Colors */
+/* GREYS (Dark to Light): #626C77, #C2C6CC, #E6E9EE, #EDF0F4, #F3F7FA, #FFFFFF*/
+/* Primary: Darkest Blue #01073C, Navy #00205B, Blue #304FFE, Brown #9A7611 */
+/* Secondary: Blue (darker than primary blue) #1930B2, Yellow #FFBF3F, Red #BF0D3E */
+
+html {
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+
 body {
-	font-family: Verdana, sans-serif; /* font type */
-	color: rgb(35,31,32); /* font color */
+    background-color: #F3F7FA;
 }
 
-h1 {
-	border-bottom: 1px solid rgb(242,217,115); /* line under main headings */
-	font-weight: bold; /*font weight of main headings */
+.next > button {
+    height: 56px;
+    border-top-right-radius: 32px !important;
+    border-bottom-right-radius: 32px !important;
+    border-top-left-radius: 32px !important;
+    border-bottom-left-radius: 32px !important;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #304FFE !important;
+    color: white !important;
 }
 
-h2 {
-	border-bottom: 1px solid rgb(242,217,115); /* line under second headings */
-	font-weight: bold; /* font weight of second headings */
+    .next > button:hover {
+        background-color: #1930B2 !important;
+        color: #C2C6CC !important;
+    }
+
+#cancelPayment {
+    height: 56px;
+    border-top-right-radius: 32px !important;
+    border-bottom-right-radius: 32px !important;
+    border-top-left-radius: 32px !important;
+    border-bottom-left-radius: 32px !important;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white !important;
+    color: #304FFE !important;
+    border: solid 1px #304FFE !important;
 }
 
-#container {
-	border-top: 5px solid rgb(242,217,115); /* thick top border size and color */
-	border-bottom: 5px solid rgb(242,217,115); /* thick bottom border size and color */
+    #cancelPayment:hover {
+        background-color: #C2C6CC !important;
+        color: #1930B2 !important;
+        border: solid 1px #1930B2 !important;
+    }
+
+.navbar {
+    background-color: #00205B !important;
 }
 
-#main {
-	border: 1px solid rgb(242,217,115); /* border color */
+h3 {
+    color: #9A7611 !important;
 }
 
-table {
-	border: 1px solid rgb(242,217,115); /*border size and color on tables */
+#transactionSummary {
+
 }
 
-thead {
-	background: rgb(242,217,115); /*background color on table headers */
+#helpContent {
+
 }
 
-th {
-	font-weight: bold; /* font weight on table headers */
+.controls > select,  {
+
 }
 
-td {
-	border: 1px solid rgb(242,217,115); /* border size and color on table data */
-	background: rgb(255,255,212);
+.title {
+
 }
 
-td:nth-child(2) {
-	text-align: right; /* text alignment on 2nd column of table data */
+/* Font Ratios */
+/* Large screens */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 56px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    h3 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    h4 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    h5 {
+        font-size: 22px;
+        line-height: 32px;
+    }
 }
 
-input {
-	background: rgb(255,255,212); /* background color on input field */
-	border: 1px solid rgb(140,140,140); /* border size and color on input field */
-}
+/* Small screens */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 40px;
+        line-height: 44px;
+        text-align: center;
+    }
 
-li .hint, li .errorTxt {
-	color: rgb(140,140,140); /* hint text color on input field */
-}
+    h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
 
-.button, a.button {
-	background-color: rgb(140,140,140); /* background color on buttons */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(140,140,140)), to(rgb(89,89,89))); /*background image on buttons */
-	color: rgb(255,255,255); /* text color on buttons */
-	font-weight: bold; /* font weight on buttons */
-}
+    h3 {
+        font-size: 32px;
+        line-height: 40px;
+    }
 
-.button:hover {
-	background-color: rgb(89,89,89); /* background color on buttons upon hover */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(89,89,89)), to(rgb(55,55,55))); /* background image on buttons upon hover */
-}
+    h4 {
+        font-size: 24px;
+        line-height: 32px;
+    }
 
-.button.primary {
-	background-color: rgb(5,62,84); /* background color on primary buttons */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(5,62,84)), to(rgb(4,19,22))); /* background image on primary buttons */
-}
-
-.button.primary:hover {
-	background-color: rgb(4,19,22); /* background color on primary buttons upon hover */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(5,52,64)), to(rgb(0,0,0)));	/* background image on primary buttons upon hover */
-}
-
-#review li:hover {
-	background-color: rgb(255,255,212); /* background color on receipt page upon hover of a line item */
-}
-
-#receipt h3 {
-	font-weight: bold; /* font weight of headers on receipt page */
-	background: rgb(242,217,115); /* background color of headers on receipt page */
-}
-
-#receipt #payInfo {
-	border-left: .1em solid rgb(242,217,115); /* left border size and color with payment info on receipt page */
+    h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
